@@ -15,9 +15,9 @@ namespace test.Controllers
                 var txt = System.IO.File.ReadAllText(filepath);
                 ulong.TryParse(txt, out count);
                 count++;
-                System.IO.File.WriteAllText(filepath, $"{count}");
+                System.IO.File.WriteAllText(filepath, count.ToString());
             }
-            return Content($"{count}");
+            return Content(count.ToString());
         }
     }
 }
